@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "emailID": {
+            "required": true,
+            "type": "int64"
+        },
+        "organization_id": {
+            "type": "int64"
+        },
+        "requestBody": {
+            "description": "Definition of an billing request payload",
+            "type": "object",
+            "properties": {
+                "active": {
+                    "description": "defines, if this email is active for alarm notifications",
+                    "type": "boolean",
+                    "x-go-name": "Active"
+                },
+                "email": {
+                    "description": "email address",
+                    "type": "string",
+                    "x-go-name": "Email"
+                },
+                "id": {
+                    "description": "id of this email",
+                    "type": "integer",
+                    "format": "int64",
+                    "x-go-name": "ID"
+                },
+                "name": {
+                    "description": "user defined name for this address (e.g. private)",
+                    "type": "string",
+                    "x-go-name": "Name"
+                },
+                "ownerID": {
+                    "description": "assinged user id for this email",
+                    "type": "integer",
+                    "format": "int64",
+                    "x-go-name": "OwnerID"
+                }
+            },
+            "x-go-package": "groupalarm.com/go/email/api/services"
+        }
+    }
+}
